@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css'>
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>WayFinder</title>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+      <a class="navbar-brand ms-3" href="#">
+        <i class="text-light mdi mdi-sail-boat"></i>
+        <span class="ms-2">WayFinder</span>
+      </a>
+    </nav>
+
+  </header>
+  <main>
+
+    <!-- Template  -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 d-flex justify-content-between bg-light m-2">
+          <span>Type</span> <span>Name</span> <span>confirmation #</span> <span>address</span> <span>Date</span>
+          <span>Cost</span>
+        </div>
+        <div id="trip">
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <form onsubmit="app.tripsController.createTrip()" class="m-2 d-flex">
+            <input type="text" name="type" id="type" placeholder="Type" required>
+            <input type="text" name="name" placeholder="Name" required>
+            <input name="id" type="text" placeholder="Confirmation #" required>
+            <input name="address" type="text" placeholder="Address" required>
+            <input name="date" type="date" placeholder="Date" style="min-width: 20px">
+            <input name="cost" type="number" placeholder="Cost">
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="bg-dark text-light">
+    <div class="text-center no-select">
+      <p><small>Made with 💖 by Codeworks</small></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="app/main.js" type="module"></script>
+</body>
+
+</html>
